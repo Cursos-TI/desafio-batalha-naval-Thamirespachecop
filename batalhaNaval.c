@@ -6,6 +6,51 @@
 
 int main() {
     // Nível Novato - Posicionamento dos Navios
+
+    //Definição de variáveis
+    char coluna[10] = {'A','B','C','D','E','F','G','H','I','J'};
+    //Criando tabuleiro matriz 10 x 10
+    int tabuleiro[10][10];
+    int agua[10][10] = {
+        {0,0,0,0,0,3,0,0,0},
+        {0,0,0,0,0,3,0,0,0},
+        {0,0,0,0,0,3,0,0,0},
+        {0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0},
+        {0,0,3,3,3,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0}
+};
+    // Exibição dos tabueiros
+    printf("Tabuleiro de Batalha Naval\n");
+    printf("\n");
+ 
+    //Tabuleiro Colunas A até J
+    printf(" ");//espaço para alinhamento da coluna Y
+    for(char i = 0;i< 10;i++){
+        printf(" %c", coluna[i]);
+    }
+    
+    //Tabuleiro Linhas 1 até 10
+        for(int i = 0; i< 10; i++){
+        printf("\n");
+         printf("%d ", i);
+         for(int j = 0; j < 10; j++){
+            printf("%d ",agua[i][j]); 
+         }
+        }
+        
+        return 0;
+    
+        }
+
+
+        //agua 
+      //    for(int i = 0;i<10;i++){
+      //  printf(" %d",agua[0][0]); }
+
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
@@ -36,5 +81,3 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
-    return 0;
-}
